@@ -1,0 +1,28 @@
+create database loja_eletronicos;
+use loja_eletronicos;
+
+create table produtos (
+id_produto int auto_increment primary key,
+nome varchar(100),
+preco varchar(100),
+estoque varchar(100)
+);
+
+create table fornecedores (
+id_fornecedor int auto_increment primary key,
+nome varchar(100),
+contato varchar(100)
+);
+
+create table compras (
+id_compra int auto_increment primary key,
+id_fornecedor int,
+data_compra date
+);
+
+create table itens (
+id_item int auto_increment primary key,
+id_compra int,
+id_produto int,
+quantidade varchar (255)
+);
